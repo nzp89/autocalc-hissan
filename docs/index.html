@@ -185,7 +185,7 @@ function performLongDivision(num1, num2) {
     const maxLength = Math.max(dividendStr.length, divisor.toString().length, quotientStr.length);
 
     // 最初の表示行: 商と被除数
-    resultLines.push(`  ${quotientStr.padStart(maxLength + 1, ' ')}\n${'-'.repeat(maxLength * 2)}`);
+    resultLines.push(`  ${quotientStr.padStart(maxLength + 1, ' ')}\n${'-'.repeat(Math.min(maxLength * 2, 28))}`);
     resultLines.push(`${divisor.toString()})${dividendStr}`);
 
     // 各ステップの処理
